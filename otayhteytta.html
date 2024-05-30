@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ota yhteyttä</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="mobilemenu.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+<style>
+    @font-face {
+        font-family: Dosis;
+        src: url(./fontit/Dosis-Bold.ttf);
+    }
+    @font-face {
+        font-family: Open-Sans;
+        src: url(./fontit/OpenSans_Condensed-Regular.ttf);
+    }
+    h1 {
+        font-family: Dosis;
+    }
+    h2 {
+        font-family: Dosis;
+    }
+    a, p {
+        font-family: Open-Sans;
+    }
+</style>
+<body class="bg-[#355BAD]">
+    <header class="relative bg-[#181F42] z-30 px-4">
+        <div class="container mx-auto max-w-[1500px]">
+            <nav class="mx-auto">
+                <ul class="container navigation flex flex-wrap items-center justify-between text-center relative py-1.5 max-w-[1500px] mx-auto">
+                    <!-- Logo on the left -->
+                    <li class="logo">
+                        <a href="index.html">
+                            <img src="./img/logonav.png" class="w-full h-auto" alt="Logo">
+                        </a>
+                    </li>
+                    <!-- Three buttons in the middle -->
+                    <li>
+                        <input type="checkbox" id="check">
+                        <label for="check" class="open-menu z-200">
+                            <i class="fa-solid fa-bars text-white hamburger-icon text-3xl"></i>
+                        </label>
+                        <label for="check" class="close-menu z-200">
+                            <i class="fa-regular fa-circle-xmark text-white close-icon text-3xl"></i>
+                        </label>
+                        <ul class="menu flex justify-center items-center text-center mb-1">
+                            <li><a href="index.html" class="text-xl text-white hover:text-[#71C949] tracking-wide py-2.5 rounded-xl" id="ahover">Koti</a></li>
+                            <li><a href="palvelut.html" class="text-xl text-white hover:text-[#71C949] tracking-wide py-2.5 px-6 sm:mx-20 lg:mx-28 rounded-xl" id="ahover">Palvelut</a></li>
+                            <li><a href="meista.html" class="text-xl text-white hover:text-[#71C949] tracking-wide py-2.5 rounded-xl" id="ahover">Meistä</a></li>
+                            <li><a href="otayhteytta.html" class="hidden2 text-xl bg-[#71C949] hover:bg-[#7DCF58] text-black font-semibold tracking-wide py-2.5 px-6 sm:px-10 rounded-xl" id="ahover">Ota yhteyttä</a></li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="menu flex justify-center items-center text-center mb-1">
+                            <li><a href="otayhteytta.html" class="text-xl bg-[#71C949] hover:bg-[#7DCF58] text-black font-semibold tracking-wide py-2.5 px-6 sm:px-10 rounded-xl" id="ahover">Ota yhteyttä</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="text-white bg-cover bg-no-repeat bg-center overflow-hidden h-[500px] -mt-1" style="background-image: url('./img/contactbanner.png');">
+        <div class="flex flex-col mx-auto h-full min-h-96 text-center md:text-left max-w-[1300px] px-4">
+              <h1 class="font-bold mb-10 text-5xl sm:text-6xl md:text-7xl mt-20">Ota yhteyttä</h1>
+              <p class="text-xl md:text-2xl max-w-[700px]">Olemme täällä auttaaksemme sinua! Ota meihin yhteyttä milloin tahansa, niin vastaamme mielellämme kysymyksiisi.</p>
+            </div>
+      </section>
+
+      <section class="px-4 -mt-28">
+      <div class="max-w-[1500px] mx-auto text-[#181F42]">
+        <div class="bg-[#B9D0FF] rounded-2xl py-10 px-10 mb-8">
+          <h1 class="text-4xl font-bold mb-10">Yhteystiedot</h1>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+              <h3 class="text-xl font-bold mb-2">Sähköposti</h3>
+              <p class="text-lg">miika@helmisolutions.fi</p>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-2">Puhelinnumero</h3>
+              <p class="text-lg">+358504009842</p>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-2">Työaika</h3>
+              <p class="text-lg">Ma-Pe klo. 8-18</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>  
+      
+    <section class="mb-10 px-4">
+            <div class="container mx-auto justify-center items-center">
+                <div class="w-full p-5 md:p-10 rounded-2xl bg-[#181F42] z-20 max-w-[1300px] mx-auto">
+                    <div class="flex flex-col">
+                        <h1 class="text-3xl sm:text-4xl md:text-5xl text-white mb-2 md:mb-1">Yhteydenottolomake</h1>
+                        <p class="text-xl text-white">Voit myös täyttää tämän lomakkeen ottaaksesi meihin yhteyttä</p>
+                    </div>
+                    <div class="grid grid-cols-1 gap-5 md:grid-cols-2 mt-5">
+                        <input class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" type="text" placeholder="Etunimi" />
+                        <input class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" type="text" placeholder="Sukunimi" />
+                        <input class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" type="email" placeholder="Sähköpostiosoitteesi" />
+                    </div>
+                    <div class="my-4">
+                        <textarea placeholder="Viestisi" class="w-full h-32 bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"></textarea>
+                    </div>
+                    <div class="my-2 w-full lg:w-1/4">
+                        <button class="text-xl font-bold tracking-wide bg-[#71C949] p-3 hover:bg-[#8AD468] text-black rounded-lg w-full">
+                            Lähetä
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+<!--FOOTER-->
+<footer class="relative bottom-0 bg-[#181F42] pt-8 pb-4 px-4">
+    <div class="container mx-auto text-white">
+        <div class="grid grid-cols-1 lg:grid-cols-2 justify-between">
+            <!-- Logo -->
+            <img src="./img/logo4.png" alt="Logo" class="w-24 h-24">
+            <!-- Uutiskirje -->
+            <div class="flex lg:hidden flex-col mb-8 mt-2">
+                <h3 class="text-white mb-2 text-2xl">Tilaa uutiskirjeemme</h3>
+                <div class="sm:flex">
+                    <input type="email" placeholder="Sähköpostiosoitteesi" class="bg-white text-black pl-3 py-2 rounded-lg mr-2 w-[280px]" required>
+                    <button class="bg-[#71C949] hover:bg-[#8AD468] text-black font-semibold text-center px-12 sm:px-10 py-2 rounded-lg mt-2 sm:mt-0 lg:text-xl">Tilaa</button>
+                </div>
+                
+            </div>
+            <!-- Listat -->
+            <div class="grid gap-y-6 md:gap-y-0 grid-cols-2 sm:grid-cols-3 text-left">
+                <ul class="mr-20 sm:mr-5 lg:mr-20 flex flex-col">
+                    <h2 class="font-semibold text-xl mb-5 text-left">Linkit</h2>
+                    <li class="mb-3"><a href="index.html" class="text-white text-left text-lg hover:text-[#71C949]">Koti</a></li>
+                    <li class="mb-3"><a href="palvelut.html" class="text-white text-left text-lg hover:text-[#71C949]">Palvelut</a></li>
+                    <li class="mb-3"><a href="meista.html" class="text-white text-left text-lg hover:text-[#71C949]">Meistä</a></li>
+                    <li class="mb-3"><a href="otayhteytta.html" class="text-white text-left text-lg hover:text-[#71C949]">Ota yhteyttä</a></li>
+                </ul>
+                <ul class="mr-20 sm:mr-5 lg:mr-20 flex flex-col">
+                    <h2 class="font-semibold text-xl mb-5 text-left">Socials</h2>
+                    <li class="mb-3"><a href="https://www.facebook.com/" class="text-white text-left text-lg hover:text-[#71C949]">Facebook</a></li>
+                    <li class="mb-3"><a href="https://www.instagram.com/" class="text-white text-left text-lg hover:text-[#71C949]">Instagram</a></li>
+                    <li class="mb-3"><a href="https://www.linkedin.com/" class="text-white text-left text-lg hover:text-[#71C949]">LinkedIn</a></li>
+                </ul>
+                <ul class="flex flex-col">
+                    <h2 class="font-semibold text-xl mb-5 text-left">Yhteystiedot</h2>
+                    <li class="mb-3"><a href="mailto:miika@helmisolutions.fi" class="text-white text-left text-lg hover:text-[#71C949]">miika@heso.fi</a></li>
+                    <li class="mb-3"><a href="tel:+358 40 0774008" class="text-white text-left text-lg hover:text-[#71C949]">+358 40 0774008</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Uutiskirje -->
+        <div class="hidden lg:flex md:flex-col mb-8 lg:-mt-24 max-w-[410px]">
+            <h3 class="text-white mb-2 text-2xl">Tilaa uutiskirjeemme</h3>
+            <div class="hidden md:flex">
+                <input type="email" placeholder="Sähköpostiosoitteesi" class="bg-white text-black pl-3 py-2 rounded-lg mr-2 w-[280px]" required>
+                <button class="bg-[#71C949] hover:bg-[#8AD468] text-black font-semibold text-center px-10 py-2 rounded-lg xl:text-xl">Tilaa</button>
+            </div>
+        </div>
+        <!-- Copyright teksti -->
+        <div class="flex items-center justify-center text-white text-sm mt-4">
+            <p class="mr-1">Copyright &#169;</p>
+            <span id="get-current-year" class="mr-1">2024</span>
+            <p>Helmi Solutions</p>
+        </div>
+    </div>
+</footer>
+<!--FOOTER END-->
+</body>
+</html>

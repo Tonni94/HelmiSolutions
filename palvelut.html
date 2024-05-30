@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palvelut</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="mobilemenu.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+<style>
+    @font-face {
+        font-family: Dosis;
+        src: url(./fontit/Dosis-Bold.ttf);
+    }
+    @font-face {
+        font-family: Open-Sans;
+        src: url(./fontit/OpenSans_Condensed-Regular.ttf);
+    }
+    h1 {
+        font-family: Dosis;
+    }
+    h2 {
+        font-family: Dosis;
+    }
+    a, p {
+        font-family: Open-Sans;
+    }
+</style>
+<body class="bg-cover bg-center" style="background-image: url('img/tausta.png');">
+    <header class="relative bg-transparent z-30 px-4 h-24">
+        <div class="container mx-auto max-w-[1500px]">
+            <nav class="mx-auto">
+                <ul class="container navigation flex flex-wrap items-center justify-between text-center relative py-1.5 max-w-[1500px] mx-auto">
+                    <!-- Logo on the left -->
+                    <li class="logo">
+                        <a href="index.html">
+                            <img src="./img/logonav.png" class="w-full h-auto" alt="Logo">
+                        </a>
+                    </li>
+                    <!-- Three buttons in the middle -->
+                    <li>
+                        <input type="checkbox" id="check">
+                        <label for="check" class="open-menu z-200">
+                            <i class="fa-solid fa-bars text-white hamburger-icon text-3xl"></i>
+                        </label>
+                        <label for="check" class="close-menu z-200">
+                            <i class="fa-regular fa-circle-xmark text-white close-icon text-3xl"></i>
+                        </label>
+                        <ul class="menu flex justify-center items-center text-center mb-1">
+                            <li><a href="index.html" class="text-xl text-white hover:text-[#71C949] tracking-wide py-2.5 rounded-xl" id="ahover">Koti</a></li>
+                            <li><a href="palvelut.html" class="text-xl text-white hover:text-[#71C949] tracking-wide py-2.5 px-6 sm:mx-20 lg:mx-28 rounded-xl" id="ahover">Palvelut</a></li>
+                            <li><a href="meista.html" class="text-xl text-white hover:text-[#71C949] tracking-wide py-2.5 rounded-xl" id="ahover">Meistä</a></li>
+                            <li><a href="otayhteytta.html" class="hidden2 text-xl bg-[#71C949] hover:bg-[#7DCF58] text-black font-semibold tracking-wide py-2.5 px-6 sm:px-10 rounded-xl" id="ahover">Ota yhteyttä</a></li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="menu flex justify-center items-center text-center mb-1">
+                            <li><a href="otayhteytta.html" class="text-xl bg-[#71C949] hover:bg-[#7DCF58] text-black font-semibold tracking-wide py-2.5 px-6 sm:px-10 rounded-xl" id="ahover">Ota yhteyttä</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="px-2 xl:px-24 bg-[#181F42] -mt-24">
+        </div>
+        <div class="pt-20">
+          <div class="flex flex-wrap items-end -m-4 mb-40 mt-20 max-w-[1500px] mx-auto">
+            <div class="w-full lg:w-1/2 p-4">
+              <h1 class="font-heading tracking-tight text-white text-5xl md:text-7xl font-medium max-w-md md:max-w-2xl">Tervetuloa tutustumaan toimiviin ratkaisuihin.</h1>
+            </div>
+            <div class="w-full lg:w-1/2 p-4">
+              <p class="text-white text-xl max-w-xl">Alta löydät lisää tietoa toiminnastamme ja palveluistamme. Tarjoamme asiantuntevaa ja asiakaslähtöistä palvelua, räätälöitynä juuri sinun tarpeisiisi. Tutustu palveluihimme ja ota tarvittaessa yhteyttä saadaksesi lisätietoja.</p>
+            </div>
+          </div>
+          <div class="relative">
+            <img class="w-full object-cover rounded-tl-2xl rounded-tr-2xl" style="height:600px; object-position: bottom;" src="./img/palveluttausta.png" alt="">
+            <div class="absolute -top-24 right-1/4">
+              <img style="height: 232px; transition: transform 2s linear;" src="img/bannerikuva.png" alt="" class="hover:rotate-180">
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <section class="my-20 px-2">
+        <div class="container mx-auto max-w-[1500px]">
+          <div class="flex items-center mb-10">
+            <h1 class="text-white font-heading text-4xl md:text-6xl font-medium">Palvelumme</h1>
+          </div>
+          <div x-data="{tab: 'verkkosivut' }">
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-1 sm:gap-0 sm:space-x-0.5 rounded-t-lg">
+              <button @click="tab = 'verkkosivut'" :class="{ 'bg-[#71C949]': tab === 'verkkosivut', 'bg-[#333C68] text-white': tab !== 'verkkosivut' }" class="text-black px-2.5 sm:px-4 sm:px-6 lg:px-9 py-4 sm:py-3 rounded-tl-xl sm:rounded-tl-xl sm:rounded-b-none sm:rounded-tr-none transition duration-200 text-lg md:text-xl lg:text-2xl font-semibold sm:font-bold">
+                Verkkosivut
+              </button>
+              <button @click="tab = 'sovellukset'" :class="{ 'bg-[#71C949]': tab === 'sovellukset', 'bg-[#333C68] text-white': tab !== 'sovellukset' }" class="text-black px-2.5 sm:px-4 sm:px-6 lg:px-9 py-4 sm:py-3 rounded-tr-xl sm:rounded-t-none sm:rounded-b-none transition duration-200 text-lg md:text-xl lg:text-2xl font-semibold sm:font-bold">
+                Sovellukset
+              </button>
+              <button @click="tab = 'konsultointi'" :class="{ 'bg-[#71C949]': tab === 'konsultointi', 'bg-[#333C68] text-white': tab !== 'konsultointi' }" class="text-black px-2.5 sm:px-4 sm:px-6 lg:px-9 py-4 sm:py-3  sm:rounded-t-none transition duration-200 text-lg md:text-xl lg:text-2xl font-semibold sm:font-bold">
+                Konsultointi
+              </button>
+              <button @click="tab = 'mainokset'"
+              :class="{ 'bg-[#71C949] text-black': tab === 'mainokset', 'bg-[#333C68] text-white': tab !== 'mainokset' }"
+              :style="{ opacity: tab !== 'mainokset' ? 0.5 : 1 }"
+              class="px-2.5 sm:px-4 sm:px-6 lg:px-9 py-4 sm:py-3  sm:rounded-tr-xl sm:rounded-tl-none transition duration-200 text-lg md:text-xl lg:text-2xl font-semibold sm:font-bold">
+               Mainokset
+            </button>
+            </div>
+            <div x-show="tab === 'verkkosivut'" class="grid grid-cols-1 lg:grid-cols-2 gap-8 bg-[#181F42] p-6 rounded-b-lg">
+              <div>
+                <h2 class="text-3xl font-semibold mb-4 text-white">Verkkosivut</h2>
+                <p class="text-white mb-6">Yrityksemme tuottaa toimivia ja laadukkaita verkkosivuja, jotka vastaavat yrityksenne tarpeita. Suunnittelemme räätälöityjä ja käyttäjäystävällisiä sivustoja, jotka ovat visuaalisesti houkuttelevia ja toimivat erinomaisesti kaikilla laitteilla. Verkkosivumme ovat myös SEO-optimoituja, mikä parantaa niiden näkyvyyttä hakukoneissa. Sitoudumme tarjoamaan korkealaatuista palvelua ja olemaan luotettava kumppani kaikissa digitaalisissa tarpeissanne. Toteutamme verkkosivuja täysin tarpeidenne mukaisesti.</p>
+                <ul class="mt-4 space-y-2">
+                    <li class="flex items-center">
+                        <svg class="w-6 h-6 text-[#71C949] mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span class="text-white">Käyttäjäystävällinen suunnittelu</span>
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-6 h-6 text-[#71C949] mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span class="text-white">Nopea latausaika</span>
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-6 h-6 text-[#71C949] mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span class="text-white">Responsiivinen design</span>
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-6 h-6 text-[#71C949] mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span class="text-white">SEO-optimoitu</span>
+                    </li>
+                </ul>
+              </div>
+              <img src="img/palvelutverkkosivut.png" alt="Graphics Design Image">
+            </div>
+            <div x-show="tab === 'sovellukset'" class="grid grid-cols-1 lg:grid-cols-2 gap-8 bg-[#181F42] p-6 rounded-b-lg">
+              <div>
+                <h2 class="text-3xl font-semibold mb-4 text-white">Sovellukset</h2>
+                <p class="text-white mb-6">Yrityksemme kehittää toimivia ja laadukkaita sovelluksia, jotka vastaavat yrityksenne tarpeita. Suunnittelemme räätälöityjä ja käyttäjäystävällisiä sovelluksia, jotka ovat visuaalisesti houkuttelevia ja toimivat erinomaisesti kaikilla laitteilla. Sovelluksemme ovat myös suorituskykyoptimoituja, mikä parantaa niiden nopeutta ja luotettavuutta. Sitoudumme tarjoamaan korkealaatuista palvelua ja olemaan luotettava kumppani kaikissa digitaalisissa tarpeissanne. Toteutamme sovelluksia täysin tarpeidenne mukaisesti.</p>
+                <ul class="mt-4 space-y-2">
+                    <li class="flex items-center">
+                        <svg class="w-6 h-6 text-[#71C949] mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span class="text-white">Turvallisuus ja tietosuoja</span>
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-6 h-6 text-[#71C949] mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span class="text-white">Nopea suorituskyky</span>
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-6 h-6 text-[#71C949] mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span class="text-white">Personoitavat käyttäjäkokemukset</span>
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-6 h-6 text-[#71C949] mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span class="text-white">Jatkuva kehitys ja tuki</span>
+                    </li>
+                </ul>
+              </div>
+              <img src="img/palvelutsovellukset.png" alt="UI/UX Design Image">
+            </div>
+            <div x-show="tab === 'konsultointi'" class="grid grid-cols-1 lg:grid-cols-2 gap-8 bg-[#181F42] p-6 rounded-b-lg">
+              <div>
+                <h2 class="text-3xl font-semibold mb-4 text-white">Konsultointi</h2>
+                <p class="text-white mb-6">Yrityksemme konsultointipalvelut ovat suunniteltu huolellisesti vastaamaan yrityksenne ainutlaatuisiin tarpeisiin ja odotuksiin. Pyrimme olemaan luotettava kumppani organisaationne matkalla kohti digitaalista menestystä tarjoamalla ammattitaitoista tukea, ohjausta ja innovatiivisia ratkaisuja.</p>
+                <ul class="mt-4 space-y-2">
+                    <li class="flex items-center">
+                        <svg class="w-6 h-6 text-[#71C949] mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span class="text-white">Yksilölliset ratkaisut</span>
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-6 h-6 text-[#71C949] mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span class="text-white">Kokemus ja asiantuntemus</span>
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-6 h-6 text-[#71C949] mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span class="text-white">Kattava analyysi</span>
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-6 h-6 text-[#71C949] mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span class="text-white">Jatkuva tuki</span>
+                    </li>
+                </ul>
+              </div>
+              <img src="img/palvelutkonsultointi.png" alt="Web Development Image">
+            </div>
+            <div x-show="tab === 'mainokset'" class="grid grid-cols-1 lg:grid-cols-2 gap-8 bg-[#181F42] p-6 rounded-b-lg">
+              <div>
+                <h2 class="text-3xl font-semibold mb-4 text-white">Mainokset</h2>
+                <p class="text-white mb-6">Yrityksemme tarjoaa ensiluokkaisia mainospalveluita, jotka vastaavat täydellisesti yrityksesi markkinointitarpeisiin. Innovatiiviset mainoksemme on suunniteltu herättämään kiinnostusta ja houkuttelemaan asiakkaita, jotta voit saavuttaa menestystä kilpailluilla markkinoilla entistä tehokkaammin.</p>
+                <ul class="mt-4 space-y-2">
+                    <li class="flex items-center">
+                        <svg class="w-6 h-6 text-[#71C949] mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span class="text-white">Kattava kohdentaminen</span>
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-6 h-6 text-[#71C949] mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span class="text-white">Luovat konseptit</span>
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-6 h-6 text-[#71C949] mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span class="text-white">Tehokas vaikutus</span>
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-6 h-6 text-[#71C949] mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span class="text-white">Tuloksellisuus</span>
+                    </li>
+                </ul>
+              </div>
+              <img src="img/palvelutmainos.png" alt="New Service Image">
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <section class="my-20 px-2">
+        <div class="container mx-auto max-w-[1500px]">
+          <h1 class="text-white font-heading text-4xl md:text-6xl font-medium mb-10">Sovelluksemme</h1>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+
+            <div class="w-full group overflow-hidden rounded-xl">
+              <a href="#" class="block rounded-xl px-8 pb-8 pt-4 relative transition duration-200 group-hover:bg-gray-100 bg-[#B9D0FF]" style="height: 420px;">
+                <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-100 transition duration-200 rounded-xl"></div>
+                <p class="text-2xl font-semibold max-w-xs group-hover:bg-transparent rounded-lg relative text-[#181F42]">Työajanseuranta</p>
+                <p class="tracking-tight text-xl font-medium max-w-xs rounded-lg mt-2 opacity-0 transition-opacity duration-200 ease-in-out group-hover:opacity-100 relative text-[#181F42]">Työajanseuranta tehty helpoksi. Sovelluksemme mahdollistaa helpon työajan kirjauksen ja seurannan.</p>
+                <div class="absolute -bottom-40 -left-2.5">
+                  <img src="./img/taustapieni.png" alt="Kuva" class="object-cover -rotate-45">
+                </div>
+                <div class="absolute bottom-6 right-6">
+                  <div class="rounded-full bg-white w-12 h-12 flex items-center justify-center group-hover:bg-gray-200 focus:bg-gray-200 focus:ring-4 focus:ring-gray-300 transition duration-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="transform transition-transform duration-200 ease-in-out group-hover:rotate-0 -rotate-45" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path d="M5 12H19M12 6L19 12L12 18" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="w-full group overflow-hidden rounded-xl">
+              <a href="#" class="block rounded-xl px-8 pb-8 pt-4 relative transition duration-200 group-hover:bg-gray-100 bg-[#181F42]" style="height: 420px;">
+                <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-80 transition duration-200 rounded-xl"></div>
+                <p class="text-2xl font-semibold max-w-xs group-hover:bg-transparent rounded-lg relative group-hover:text-[#181F42] text-white">Työnhallinta</p>
+                <p class="tracking-tight text-xl font-medium max-w-xs rounded-lg mt-2 opacity-0 transition-opacity duration-200 ease-in-out group-hover:opacity-100 relative text-white group-hover:text-[#181F42]">Työnhallinnan sovelluksellamme teet työnhallinnasta ja ohjailusta vaivatonta.</p>
+                <div class="absolute -bottom-40 -left-2.5">
+                  <img src="./img/taustapieni.png" alt="Kuva" class="object-cover -rotate-45">
+                </div>
+                <div class="absolute bottom-6 right-6">
+                  <div class="rounded-full bg-white w-12 h-12 flex items-center justify-center group-hover:bg-gray-200 focus:bg-gray-200 focus:ring-4 focus:ring-gray-300 transition duration-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="transform transition-transform duration-200 ease-in-out" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path d="M5 12H19M12 6L19 12L12 18" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="w-full group overflow-hidden rounded-xl">
+              <a href="#" class="block rounded-xl px-8 pb-8 pt-4 relative transition duration-200 group-hover:bg-gray-100 bg-[#B9D0FF]" style="height: 420px;">
+                <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-100 transition duration-200 rounded-xl"></div>
+                <p class="text-2xl font-semibold max-w-xs group-hover:bg-transparent rounded-lg relative text-[#181F42]">Vartiointi</p>
+                <p class="tracking-tight text-xl font-medium max-w-xs rounded-lg mt-2 opacity-0 transition-opacity duration-200 ease-in-out group-hover:opacity-100 relative text-[#181F42]">Vartiointi sovellus mahdollistaa työnhallinnan helpottamisen sekä erilaiset kirjaukset.</p>
+                <div class="absolute -bottom-40 -left-2.5">
+                  <img src="./img/taustapieni.png" alt="Kuva" class="object-cover -rotate-45">
+                </div>
+                <div class="absolute bottom-6 right-6">
+                  <div class="rounded-full bg-white w-12 h-12 flex items-center justify-center group-hover:bg-gray-200 focus:bg-gray-200 focus:ring-4 focus:ring-gray-300 transition duration-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="transform transition-transform duration-200 ease-in-out group-hover:rotate-0 -rotate-45" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path d="M5 12H19M12 6L19 12L12 18" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="w-full group overflow-hidden rounded-xl">
+              <a href="#" class="block rounded-xl px-8 pb-8 pt-4 relative transition duration-200 group-hover:bg-gray-100 bg-[#B9D0FF]" style="height: 420px;">
+                <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-100 transition duration-200 rounded-xl"></div>
+                <p class="text-2xl font-semibold max-w-xs rounded-lg relative text-[#181F42]">Prepaid lounas</p>
+                <p class="tracking-tight text-xl font-medium max-w-xs rounded-lg mt-2 opacity-0 transition-opacity duration-200 ease-in-out group-hover:opacity-100 relative text-[#181F42]">Prepaid lounas on lounasravintoloihin suunnattu sovellus, joka helpottaa ja tehostaa lounasravintoloiden toimintaa.</p>
+                <div class="absolute -bottom-40 -left-2.5">
+                  <img src="./img/taustapieni.png" alt="Kuva" class="object-cover -rotate-45">
+                </div>
+                <div class="absolute bottom-6 right-6">
+                  <div class="rounded-full bg-white w-12 h-12 flex items-center justify-center group-hover:bg-gray-200 focus:bg-gray-200 focus:ring-4 focus:ring-gray-300 transition duration-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="transform transition-transform duration-200 ease-in-out group-hover:rotate-0 -rotate-45" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path d="M5 12H19M12 6L19 12L12 18" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+   
+<!--FOOTER-->
+<footer class="relative bottom-0 bg-[#181F42] pt-8 pb-4 px-4">
+    <div class="container mx-auto text-white">
+        <div class="grid grid-cols-1 lg:grid-cols-2 justify-between">
+            <!-- Logo -->
+            <img src="./img/logo4.png" alt="Logo" class="w-24 h-24">
+            <!-- Uutiskirje -->
+            <div class="flex lg:hidden flex-col mb-8 mt-2">
+                <h3 class="text-white mb-2 text-2xl">Tilaa uutiskirjeemme</h3>
+                <div class="sm:flex">
+                    <input type="email" placeholder="Sähköpostiosoitteesi" class="bg-white text-black pl-3 py-2 rounded-lg mr-2 w-[280px]" required>
+                    <button class="bg-[#71C949] hover:bg-[#8AD468] text-black font-semibold text-center px-12 sm:px-10 py-2 rounded-lg mt-2 sm:mt-0 lg:text-xl">Tilaa</button>
+                </div>
+                
+            </div>
+            <!-- Listat -->
+            <div class="grid gap-y-6 md:gap-y-0 grid-cols-2 sm:grid-cols-3 text-left">
+                <ul class="mr-20 sm:mr-5 lg:mr-20 flex flex-col">
+                    <h2 class="font-semibold text-xl mb-5 text-left">Linkit</h2>
+                    <li class="mb-3"><a href="index.html" class="text-white text-left text-lg hover:text-[#71C949]">Koti</a></li>
+                    <li class="mb-3"><a href="palvelut.html" class="text-white text-left text-lg hover:text-[#71C949]">Palvelut</a></li>
+                    <li class="mb-3"><a href="meista.html" class="text-white text-left text-lg hover:text-[#71C949]">Meistä</a></li>
+                    <li class="mb-3"><a href="otayhteytta.html" class="text-white text-left text-lg hover:text-[#71C949]">Ota yhteyttä</a></li>
+                </ul>
+                <ul class="mr-20 sm:mr-5 lg:mr-20 flex flex-col">
+                    <h2 class="font-semibold text-xl mb-5 text-left">Socials</h2>
+                    <li class="mb-3"><a href="https://www.facebook.com/" class="text-white text-left text-lg hover:text-[#71C949]">Facebook</a></li>
+                    <li class="mb-3"><a href="https://www.instagram.com/" class="text-white text-left text-lg hover:text-[#71C949]">Instagram</a></li>
+                    <li class="mb-3"><a href="https://www.linkedin.com/" class="text-white text-left text-lg hover:text-[#71C949]">LinkedIn</a></li>
+                </ul>
+                <ul class="flex flex-col">
+                    <h2 class="font-semibold text-xl mb-5 text-left">Yhteystiedot</h2>
+                    <li class="mb-3"><a href="mailto:miika@helmisolutions.fi" class="text-white text-left text-lg hover:text-[#71C949]">miika@heso.fi</a></li>
+                    <li class="mb-3"><a href="tel:+358 40 0774008" class="text-white text-left text-lg hover:text-[#71C949]">+358 40 0774008</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Uutiskirje -->
+        <div class="hidden lg:flex md:flex-col mb-8 lg:-mt-24 max-w-[410px]">
+            <h3 class="text-white mb-2 text-2xl">Tilaa uutiskirjeemme</h3>
+            <div class="hidden md:flex">
+                <input type="email" placeholder="Sähköpostiosoitteesi" class="bg-white text-black pl-3 py-2 rounded-lg mr-2 w-[280px]" required>
+                <button class="bg-[#71C949] hover:bg-[#8AD468] text-black font-semibold text-center px-10 py-2 rounded-lg xl:text-xl">Tilaa</button>
+            </div>
+        </div>
+        <!-- Copyright teksti -->
+        <div class="flex items-center justify-center text-white text-sm mt-4">
+            <p class="mr-1">Copyright &#169;</p>
+            <span id="get-current-year" class="mr-1">2024</span>
+            <p>Helmi Solutions</p>
+        </div>
+    </div>
+</footer>
+<!--FOOTER END-->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    function revealTextOnScroll() {
+      const screenWidth = window.innerWidth || document.documentElement.clientWidth;
+      if (screenWidth < 768) { // Check if screen width is less than 768px (typical mobile devices)
+        const elements = document.querySelectorAll('.w-full');
+        elements.forEach((element) => {
+          const bounding = element.getBoundingClientRect();
+          if (
+            bounding.top >= 0 &&
+            bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+          ) {
+            const textElements = element.querySelectorAll('.tracking-tight');
+            textElements.forEach((textElement) => {
+              textElement.style.opacity = '1';
+            });
+          }
+        });
+      }
+    }
+
+    // Initially reveal elements in view on mobile devices
+    revealTextOnScroll();
+
+    // Reveal elements on scroll on mobile devices
+    window.addEventListener('scroll', revealTextOnScroll);
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meistä</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="mobilemenu.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+<style>
+    @font-face {
+        font-family: Dosis;
+        src: url(./fontit/Dosis-Bold.ttf);
+    }
+    @font-face {
+        font-family: Open-Sans;
+        src: url(./fontit/OpenSans_Condensed-Regular.ttf);
+    }
+    h1 {
+        font-family: Dosis;
+    }
+    h2 {
+        font-family: Dosis;
+    }
+    a, p {
+        font-family: Open-Sans;
+    }
+
+    .Palvelut {
+    position: relative;
+    }
+
+    .Palvelut {
+        overflow-x: hidden;
+    }
+/*
+    .Tarinasection {
+        background: linear-gradient(to right, #B9D0FF 70%, #181F42 70%, #181F42 100%);
+    }
+    
+    @media (max-width: 768px) {
+        .Tarinasection {
+            background: linear-gradient(to bottom, #B9D0FF 80%, #181F42 80%, #181F42 100%);
+        }
+    }
+    */
+</style>
+</head>
+<body class="bg-cover bg-center" style="background-image: url('img/tausta.png');">
+    <header class="relative bg-transparent z-30 px-4">
+        <div class="container mx-auto max-w-[1500px]">
+            <nav class="mx-auto">
+                <ul class="container navigation flex flex-wrap items-center justify-between text-center relative py-1.5 max-w-[1500px] mx-auto">
+                    <!-- Logo on the left -->
+                    <li class="logo">
+                        <a href="index.html">
+                            <img src="./img/logonav.png" class="w-full h-auto" alt="Logo">
+                        </a>
+                    </li>
+                    <!-- Three buttons in the middle -->
+                    <li>
+                        <input type="checkbox" id="check">
+                        <label for="check" class="open-menu z-200">
+                            <i class="fa-solid fa-bars text-white hamburger-icon text-3xl"></i>
+                        </label>
+                        <label for="check" class="close-menu z-200">
+                            <i class="fa-regular fa-circle-xmark text-white close-icon text-3xl"></i>
+                        </label>
+                        <ul class="menu flex justify-center items-center text-center mb-1">
+                            <li><a href="index.html" class="text-xl text-white hover:text-[#71C949] tracking-wide py-2.5 rounded-xl" id="ahover">Koti</a></li>
+                            <li><a href="palvelut.html" class="text-xl text-white hover:text-[#71C949] tracking-wide py-2.5 px-6 sm:mx-20 lg:mx-28 rounded-xl" id="ahover">Palvelut</a></li>
+                            <li><a href="meista.html" class="text-xl text-white hover:text-[#71C949] tracking-wide py-2.5 rounded-xl" id="ahover">Meistä</a></li>
+                            <li><a href="otayhteytta.html" class="hidden2 text-xl bg-[#71C949] hover:bg-[#7DCF58] text-black font-semibold tracking-wide py-2.5 px-6 sm:px-10 rounded-xl" id="ahover">Ota yhteyttä</a></li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="menu flex justify-center items-center text-center mb-1">
+                            <li><a href="otayhteytta.html" class="text-xl bg-[#71C949] hover:bg-[#7DCF58] text-black font-semibold tracking-wide py-2.5 px-6 sm:px-10 rounded-xl" id="ahover">Ota yhteyttä</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="mainbanner bg-gradient-to-b from-[#181F42] from-70% to-[#355BAD] to-100% px-4 -mt-24">
+        <div class="banner text-white max-w-[1500px] mx-auto pt-32 md:pt-36">
+            <h1 class="text-center md:text-left font-bold text-5xl sm:text-6xl md:text-7xl mb-8">Me olemme <br> Helmi Solutions</h1>
+        </div>
+        <div class="banner-content grid grid-cols-1 md:grid-cols-2 max-w-[1500px] flex mx-auto justify-start items-start">
+            <img id="gifImage" src="./img/meista2.png" alt="logogif" class="mx-auto rounded-xl md:-mb-24 w-3/4" style="max-width: 486px; max-height: 432px;">
+            <div class="flex flex-col justify-between md:pl-5 xl:pl-0 my-8 md:mt-0 mx-auto items-center md:items-start">
+                <p class="text-center md:text-left text-xl text-white mb-4">Olemme moderni, innovatiivinen ja luotettava IT-kumppani, joka tarjoaa täysin räätälöityjä ratkaisuja vastaamaan yrityksesi tarpeita. Anna meidän auttaa sinua kiihdyttämään liiketoimintaasi uudelle tasolle. Kiinnostuitko? Tutustu tarkemmin palveluihimme.</p>
+                <a href="palvelut.html" class="px-14 py-2.5 bg-[#71C949] hover:bg-[#8AD468] text-black font-semibold rounded-xl text-xl text-center">Palvelumme</a>
+            </div>
+        </div>            
+    </section>
+    
+    <section class="px-10 sm:px-4 mt-20 mb-20">
+        <div class="max-w-[600px] text-center md:text-end mx-auto">
+            <h1 class="text-5xl md:text-6xl text-white mb-5">Tiimimme</h1>
+        </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 mx-auto max-w-[1100px] justify-center items-center">
+                <div class="card w-full h-auto mx-auto">
+                    <div class="flex flex-col">
+                        <img class="items-center mb-4" src="img/profile.png" alt="Image 3">
+                        <div class="text-left">
+                            <h2 class="text-3xl text-white">Lari</h2>
+                            <p class="text-xl text-white">Lead developer</p>
+                        </div>
+                    </div>
+                </div> 
+                <div class="card w-full h-auto mx-auto">
+                    <div class="flex flex-col">
+                        <img class="items-center mb-4" src="img/profile.png" alt="Image 3">
+                        <div class="text-left">
+                            <h2 class="text-3xl text-white">Miika</h2>
+                            <p class="text-xl text-white">Marketing & Contact</p>
+                        </div>
+                    </div>
+                </div> 
+                <div class="card w-full h-auto mx-auto">
+                    <div class="flex flex-col">
+                        <img class="items-center mb-4" src="img/profile.png" alt="Image 3">
+                        <div class="text-left">
+                            <h2 class="text-3xl text-white">Toni</h2>
+                            <p class="text-xl text-white">Developer & Product designer</p>
+                        </div>
+                    </div>
+                </div>  
+            </div>        
+        </section>
+        
+    <section class="px-4 mt-16 pb-20">
+        <div class="max-w-[1500px] mx-auto">
+            <h1 class="text-5xl md:text-6xl text-white mb-8 text-center md:text-start">Arvomme</h1>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+    
+                <div class="block rounded-xl border border-gray-800 p-4 bg-[#181F42]">
+                    <span class="inline-block rounded-lg p-3">
+                       <div class="inline-flex align-middle justify-center items-center select-none text-white">
+                        <img src="./img/luotettavuus1.png" alt="Image" class="w-14 h-14">
+                       </div>
+                    </span>
+                    <h1 class="text-3xl text-white font-semibold">Luotettavuus</h1>
+                    <hr class="w-20 mb-2 mt-1 border-white">
+                    <p class="text-xl text-white">Olemme luotettava kumppani niin ylä- kuin alamäessäkin. Haluamme aidosti tehostaa, kehittää sekä helpottaa yrityksiä ja heidän kipukohtiaan.</p>
+                </div>
+        
+                <div class="block rounded-xl border border-gray-800 p-4 bg-[#181F42]">
+                    <span class="inline-block rounded-lg p-3">
+                        <div class="inline-flex align-middle justify-center items-center select-none text-white">
+                            <img src="./img/maanläheisyys2.png" alt="Image" class="w-14 h-14">
+                        </div>
+                    </span>
+                    <h1 class="text-3xl text-white font-semibold">Maanläheisyys</h1>
+                    <hr class="w-20 mb-5 mt-1.5 border-white">
+                    <p class="text-xl text-white">Pyrimme tuomaan nykyaikaisia ohjelmistoja ja työkaluja jokaisen yrityksen tarpeisiin budjetista riippumatta.</p>
+                </div>
+        
+                <div class="block rounded-xl border border-gray-800 p-4 bg-[#181F42]">
+                    <span class="inline-block rounded-lg p-3">
+                        <div class="inline-flex align-middle justify-center items-center select-none text-white">
+                            <img src="./img/asiakaskeskeisyys2.png" alt="Image" class="w-14 h-14">
+                        </div>
+                    </span>
+    
+                    <h1 class="text-3xl text-white font-semibold">Asiakaskeskeisyys</h1>
+                    <hr class="w-20 mb-2 mt-1 border-white">
+                    <p class="text-xl text-white">Kuuntelemme ja kartoitamme asiakkaidemme tarpeeet ja räätälöimme heidän tarpeisiin vastaavia ratkaisuja.</p>
+                </div>
+        
+                <div class="block rounded-xl border border-gray-800 p-4 bg-[#181F42]">
+                    <span  class="inline-block rounded-lg p-3">
+                       <div class="inline-flex align-middle justify-center items-center select-none text-white">
+                        <img src="./img/innovatiivisuus2.png" alt="Image" class="w-14 h-14">
+                       </div>
+                    </span>
+                    <h1 class="text-3xl text-white font-semibold">Innovatiivisuus</h1>
+                    <hr class="w-20 mb-2 mt-1 border-white">
+                    <p class="text-xl text-white">Tuotamme moderneja ja tehokkaita ratkaisuja, jotka vastaavat nykypäivän ongelmiin. Pureudumme ongelmiin ja ratkaisemme ne.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="px-4 mb-20">
+        <div class="max-w-[1500px] mx-auto">
+            <h1 class="text-5xl md:text-6xl text-white mb-8 text-center">Tarinamme</h1>
+        </div>
+        <div class="Tarinasection grid grid-cols-1 md:grid-cols-3 gap-x-2 max-w-[1500px] mx-auto rounded-lg">
+            <div class="text-white col-span-2 flex flex-col justify-center md:pr-5 lg:pr-10">
+                <h2 class="text-2xl mb-4">Kuinka kaikki alkoi</h2>
+                <p class="text-lg lg:text-xl text-white tracking-tight mb-4">
+                    Helmi Solutions Oy sai alkunsa, kun kolme ystävää päätti perustaa yrityksen tarjotakseen korkealaatuisia IT-ratkaisuja kohtuullisin hinnoin. He havaitsivat, että monilla pienillä ja keskisuurilla yrityksillä oli vaikeuksia löytää edullisia ja luotettavia IT-palveluja. Tämä oivallus johti yrityksen missioon tarjota asiakaslähtöisiä ja kustannustehokkaita ratkaisuja.
+                </p>
+                <p class="text-lg lg:text-xl text-white tracking-tight mb-5 md:mb-0">
+                    Yrityksen kulmakiviksi muotoutuivat asiakaspalvelu ja luotettavuus kumppanina, ei pelkästään palveluntarjoajana. Asettimme tavoitteeksi pitää hinnoittelun yksinkertaisena ja läpinäkyvänä, jotta yritykset voisivat budjetoida IT-kustannuksensa vaivattomasti.
+                </p>
+            </div>
+            <div class="flex justify-center h-full">
+                <img src="./img/tarinamme2.png" alt="" class="p-6 md:p-0 w-full h-auto object-contain" style="max-width: 452px; max-height: 439px;">
+            </div>
+        </div>
+    </section>
+      
+    <!-- TESTI
+    <section class="px-4 mb-20">
+        <div class="Tarinasection grid grid-cols-1 md:grid-cols-2 gap-x-2 max-w-[1500px] mx-auto items-center rounded-lg p-4 lg:p-6">
+            <div class="text-white pt-4 pb-4 px-4 md:px-0">
+                <h1 class="text-5xl md:text-6xl mb-5 text-[#181F42]">Tarinamme</h1>
+                <p class="text-lg lg:text-xl text-[#181F42] tracking-tight mb-4">
+                    Helmi Solutions Oy sai alkunsa, kun kolme ystävää päätti perustaa yrityksen tarjotakseen korkealaatuisia IT-ratkaisuja kohtuullisin hinnoin. He havaitsivat, että monilla pienillä ja keskisuurilla yrityksillä oli vaikeuksia löytää edullisia ja luotettavia IT-palveluja. Tämä oivallus johti yrityksen missioon tarjota asiakaslähtöisiä ja kustannustehokkaita ratkaisuja.</p>
+                <p class="text-lg lg:text-xl text-[#181F42] tracking-tight">Yrityksen kulmakiviksi muotoutuivat asiakaspalvelu ja luotettavuus kumppanina, ei pelkästään palveluntarjoajana. Asettimme tavoitteeksi pitää hinnoittelun yksinkertaisena ja läpinäkyvänä, jotta yritykset voisivat budjetoida IT-kustannuksensa vaivattomasti.</p>
+            </div>
+            <div class="flex justify-center items-center h-full">
+                <img src="./img/testi.png" alt="" class="rounded-lg" style="height: 100%; width: 100%; object-fit: cover;">
+            </div>
+        </div>
+    </section>
+-->
+    
+<!--FOOTER-->
+<footer class="relative bottom-0 bg-[#181F42] pt-8 pb-4 px-4">
+    <div class="container mx-auto text-white">
+        <div class="grid grid-cols-1 lg:grid-cols-2 justify-between">
+            <!-- Logo -->
+            <img src="./img/logo4.png" alt="Logo" class="w-24 h-24">
+            <!-- Uutiskirje -->
+            <div class="flex lg:hidden flex-col mb-8 mt-2">
+                <h3 class="text-white mb-2 text-2xl">Tilaa uutiskirjeemme</h3>
+                <div class="sm:flex">
+                    <input type="email" placeholder="Sähköpostiosoitteesi" class="bg-white text-black pl-3 py-2 rounded-lg mr-2 w-[280px]" required>
+                    <button class="bg-[#71C949] hover:bg-[#8AD468] text-black font-semibold text-center px-12 sm:px-10 py-2 rounded-lg mt-2 sm:mt-0 lg:text-xl">Tilaa</button>
+                </div>
+                
+            </div>
+            <!-- Listat -->
+            <div class="grid gap-y-6 md:gap-y-0 grid-cols-2 sm:grid-cols-3 text-left">
+                <ul class="mr-20 sm:mr-5 lg:mr-20 flex flex-col">
+                    <h2 class="font-semibold text-xl mb-5 text-left">Linkit</h2>
+                    <li class="mb-3"><a href="index.html" class="text-white text-left text-lg hover:text-[#71C949]">Koti</a></li>
+                    <li class="mb-3"><a href="palvelut.html" class="text-white text-left text-lg hover:text-[#71C949]">Palvelut</a></li>
+                    <li class="mb-3"><a href="meista.html" class="text-white text-left text-lg hover:text-[#71C949]">Meistä</a></li>
+                    <li class="mb-3"><a href="otayhteytta.html" class="text-white text-left text-lg hover:text-[#71C949]">Ota yhteyttä</a></li>
+                </ul>
+                <ul class="mr-20 sm:mr-5 lg:mr-20 flex flex-col">
+                    <h2 class="font-semibold text-xl mb-5 text-left">Socials</h2>
+                    <li class="mb-3"><a href="https://www.facebook.com/" class="text-white text-left text-lg hover:text-[#71C949]">Facebook</a></li>
+                    <li class="mb-3"><a href="https://www.instagram.com/" class="text-white text-left text-lg hover:text-[#71C949]">Instagram</a></li>
+                    <li class="mb-3"><a href="https://www.linkedin.com/" class="text-white text-left text-lg hover:text-[#71C949]">LinkedIn</a></li>
+                </ul>
+                <ul class="flex flex-col">
+                    <h2 class="font-semibold text-xl mb-5 text-left">Yhteystiedot</h2>
+                    <li class="mb-3"><a href="mailto:miika@helmisolutions.fi" class="text-white text-left text-lg hover:text-[#71C949]">miika@heso.fi</a></li>
+                    <li class="mb-3"><a href="tel:+358 40 0774008" class="text-white text-left text-lg hover:text-[#71C949]">+358 40 0774008</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Uutiskirje -->
+        <div class="hidden lg:flex md:flex-col mb-8 lg:-mt-24 max-w-[410px]">
+            <h3 class="text-white mb-2 text-2xl">Tilaa uutiskirjeemme</h3>
+            <div class="hidden md:flex">
+                <input type="email" placeholder="Sähköpostiosoitteesi" class="bg-white text-black pl-3 py-2 rounded-lg mr-2 w-[280px]" required>
+                <button class="bg-[#71C949] hover:bg-[#8AD468] text-black font-semibold text-center px-10 py-2 rounded-lg xl:text-xl">Tilaa</button>
+            </div>
+        </div>
+        <!-- Copyright teksti -->
+        <div class="flex items-center justify-center text-white text-sm mt-4">
+            <p class="mr-1">Copyright &#169;</p>
+            <span id="get-current-year" class="mr-1">2024</span>
+            <p>Helmi Solutions</p>
+        </div>
+    </div>
+</footer>
+<!--FOOTER END-->
+</body>
+</html>
