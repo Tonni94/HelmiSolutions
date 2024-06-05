@@ -5,345 +5,372 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etusivu</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="mobilemenu.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-<style>
-    @font-face {
-        font-family: Dosis;
-        src: url(./fontit/Dosis-Bold.ttf);
-    }
-    @font-face {
-        font-family: Open-Sans;
-        src: url(./fontit/OpenSans_Condensed-Regular.ttf);
-    }
-    h1 {
-        font-family: Dosis;
-    }
-    h2 {
-        font-family: Dosis;
-    }
-    a, p {
-        font-family: Open-Sans;
-    }
-
-    .Palvelut {
-    position: relative;
-    }
-
-    .Palvelut {
-        overflow-x: hidden;
-    }
-
-    .Palvelut:before {
-        content: ''; /* Create the pseudo-element */
-        position: absolute; /* Position the pseudo-element absolutely */
-        top: 34%;
-        left: 50%; /* Center the pseudo-element horizontally */
-        transform: translateX(-10%); /* Center the pseudo-element horizontally */
-        width: calc(100vw - (100% - 1700px) / 2); /* Stretch the pseudo-element to the right side */
-        background-color: #94B0ED; /* Background color */
-        z-index: -1; /* Push the pseudo-element behind other content */
-        height: 59%;
-        border-radius: 12px 0 0px 12px;
-    }
-
-    .mainbanner {
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 14px 16px -1px rgba(0, 0, 0, 0.50);
-}
-
-    .mainbanner {
-        background: linear-gradient(to right, #181F42 20%, #355BAD 70%, #B9D0FF 100%);
-    }
-    
-    @media (max-width: 768px) {
-        .mainbanner {
-            background: linear-gradient(to bottom, #181F42 20%, #355BAD 70%, #B9D0FF 100%);
-        }
-    }
-    @media (min-width: 1280px) {
-        .circle-container .card {
-            position: absolute;
-            transform: translate(-50%, -50%);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .card-1 { top: 15%; left: 28%;}
-        .card-2 { top: 85%; left: 28%;}
-        .card-3 { top: 50%; left: 75%;}
-        .card-4 { top: 85%; left: 72%;}
-        .card-5 { top: 50%; left: 25%;}
-        .card-6 { top: 15%; left: 72%;}
-        .center-element {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            margin-left: 2rem;
-        }
-        .circle-container {
-            height: 750px;
-        }
-    }
-
-    @media (max-width: 1279px) {
-        .circle-container {
-        max-width: 1100px;
-        }
-    }
-
-    @media (min-width: 1440px) {
-        .center-element {
-            margin-left: 1.5rem;
-        }
-    }
-
-    @media (min-width: 1590px) {
-        .center-element {
-            margin-left: 0rem;
-        }
-    }
-
-    @media (max-width: 1279px) {
-        .center-element {
-            display: none;
-        }
-    }
-
-    @media (max-width: 1279px) {
-        .card {
-        width: 100%;
-        }
-    }
-
-</style>
 </head>
-<body class="bg-cover bg-center" style="background-image: url('img/tausta.png');">
-    <header class="relative bg-transparent z-30 px-4 h-24">
-        <div class="container mx-auto max-w-[1500px]">
-            <nav class="mx-auto">
-                <ul class="container navigation flex flex-wrap items-center justify-between text-center relative py-1.5 max-w-[1500px] mx-auto">
-                    <!-- Logo on the left -->
-                    <li class="logo">
-                        <a href="index.html">
-                            <img src="./img/logonav.png" class="w-full h-auto" alt="Logo">
-                        </a>
-                    </li>
-                    <!-- Three buttons in the middle -->
-                    <li>
-                        <input type="checkbox" id="check">
-                        <label for="check" class="open-menu z-200">
-                            <i class="fa-solid fa-bars text-white hamburger-icon text-3xl"></i>
-                        </label>
-                        <label for="check" class="close-menu z-200">
-                            <i class="fa-regular fa-circle-xmark text-white close-icon text-3xl"></i>
-                        </label>
-                        <ul class="menu flex justify-center items-center text-center mb-1">
-                            <li><a href="index.html" class="text-xl text-white hover:text-[#71C949] tracking-wide py-2.5 rounded-xl" id="ahover">Koti</a></li>
-                            <li><a href="palvelut.html" class="text-xl text-white hover:text-[#71C949] tracking-wide py-2.5 px-6 sm:mx-20 lg:mx-28 rounded-xl" id="ahover">Palvelut</a></li>
-                            <li><a href="meista.html" class="text-xl text-white hover:text-[#71C949] tracking-wide py-2.5 rounded-xl" id="ahover">Meistä</a></li>
-                            <li><a href="otayhteytta.html" class="hidden2 text-xl bg-[#71C949] hover:bg-[#7DCF58] text-black font-semibold tracking-wide py-2.5 px-6 sm:px-10 rounded-xl" id="ahover">Ota yhteyttä</a></li>
-
-                        </ul>
-                    </li>
-                    <li>
-                        <ul class="menu flex justify-center items-center text-center mb-1">
-                            <li><a href="otayhteytta.html" class="text-xl bg-[#71C949] hover:bg-[#7DCF58] text-black font-semibold tracking-wide py-2.5 px-6 sm:px-10 rounded-xl" id="ahover">Ota yhteyttä</a></li>
-                        </ul>
-                    </li>
+<body class="bg-[#0E1111]">
+<!--Header-->
+<section class="px-4 md:px-20 pb-24 bg-center bg-no-repeat bg-cover relative overflow-hidden" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/baarikuva.jpeg')">
+  <div x-data="{ mobileNavOpen: false }">
+        <nav class="relative p-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <a href="#" class="inline-block">
+                        <img class="h-28" src="logot/bar-tiger_logo.png" alt="">
+                    </a>
+                </div>
+                <ul class="hidden xl:flex items-center gap-2">
+                    <li><a href="#Aukioloajat" class="inline-block py-2 px-3 hover:bg-gray-100 hover:text-black transition duration-200 text-white text-sm font-medium tracking-tight rounded-full">Aukioloajat</a></li>
+                    <li><a href="#Meista" class="inline-block py-2 px-3 hover:bg-gray-100 group transition duration-200 rounded-full"><span class="text-white group-hover:text-black text-sm font-medium tracking-tight">Meistä</span></a></li>
+                    <li><a href="#Tapahtumat" class="inline-block py-2 px-3 hover:bg-gray-100 hover:text-black transition duration-200 text-white text-sm font-medium tracking-tight rounded-full">Tapahtumat</a></li>
+                    <li><a href="#Palvelut" class="inline-block py-2 px-3 hover:bg-gray-100 hover:text-black transition duration-200 text-white text-sm font-medium tracking-tight rounded-full">Palvelut</a></li>
                 </ul>
-            </nav>
+                <a href="#Yhteydenotto" class="rounded-full bg-[#FFC100] px-5 py-3 h-14 hover:bg-gray-50 focus:ring-4 focus:ring-gray-200 hidden xl:inline-flex items-center justify-center gap-2 transition duration-200">
+                    <span class="text-lg font-semibold tracking-tight">Ota yhteyttä</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16" fill="none">
+                        <path d="M14 6.66666H7.33333C4.38781 6.66666 2 9.05447 2 12V13.3333M14 6.66666L10 10.6667M14 6.66666L10 2.66666" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </a>
+                <a x-on:click.prevent="mobileNavOpen = !mobileNavOpen" href="#" class="xl:hidden">
+                    <svg class="navbar-burger text-white" width="51" height="51" viewbox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="56" height="56" rx="28" fill="currentColor"></rect>
+                        <path d="M37 32H19M37 24H19" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </a>
+            </div>
+        </nav>
+        <div :class="{'hidden': !mobileNavOpen}" class="hidden fixed top-0 left-0 bottom-0 w-5/6 max-w-xs z-50">
+          <div x-on:click.prevent="mobileNavOpen = !mobileNavOpen" class="fixed inset-0 bg-black opacity-20"></div>
+          <nav class="relative p-8 w-full h-full bg-[#0E1111] overflow-y-auto" style="background-color: #0E1111;">
+              <div class="absolute top-0 right-0 w-full h-full bg-no-repeat bg-top bg-cover" style="background-image: url('img/tiger13.png');"></div>
+              <div class="relative z-10 flex items-center justify-between">
+                  <a href="#" class="inline-block">
+                      <img class="h-20" src="logot/bar-tiger_logo_NEGA.png" alt="">
+                  </a>
+                  <a x-on:click.prevent="mobileNavOpen = !mobileNavOpen" href="#">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6 18L18 6M6 6L18 18" stroke="#ffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                  </a>
+              </div>
+              <ul class="relative z-10 flex flex-col gap-12 py-12">
+                  <li>
+                      <a href="#Aukioloajat" class="inline-block py-2 px-3 hover:bg-gray-50 transition duration-200 rounded-full">
+                          <div class="flex items-center gap-2">
+                              <span class="text-md font-medium tracking-tight text-white">Aukioloajat</span>
+                          </div>
+                      </a>
+                  </li>
+                </li>
+                <li>
+                    <a href="#Palvelut" class="inline-block py-2 px-3 hover:bg-gray-50 transition duration-200 rounded-full">
+                        <div class="flex items-center gap-2">
+                            <span class="text-md font-medium tracking-tight text-white">Palvelut</span>
+                        </div>
+                    </a>
+                </li>
+                  <li>
+                      <a href="#Meista" class="inline-block py-2 px-3 hover:bg-gray-50 transition duration-200 rounded-full">
+                          <div class="flex items-center gap-2">
+                              <span class="text-md font-medium tracking-tight text-white">Meistä</span>
+                          </div>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#Tapahtumat" class="inline-block py-2 px-3 hover:bg-gray-50 transition duration-200 rounded-full">
+                          <div class="flex items-center gap-2">
+                              <span class="text-md font-medium tracking-tight text-white">Tapahtumat</span>
+                          </div>
+                      </a>
+                  </li>
+              </ul>
+              <div class="relative z-10 flex flex-col gap-4">
+                  <a href="#Yhteydenotto" class="rounded-full bg-[#FFC100] px-5 py-3 h-14 hover:bg-orange-600 focus:bg-orange-500 focus:ring-4 focus:ring-orange-200 inline-flex items-center justify-center gap-2 transition duration-200">
+                      <span class="text-black text-md font-semibold tracking-tight">Ota yhteyttä</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                          <path d="M14 6.66666H7.33333C4.38781 6.66666 2 9.05447 2 12V13.3333M14 6.66666L10 10.6667M14 6.66666L10 2.66666" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                  </a>
+              </div>
+          </nav>
+      </div>
+    </div>
+    <!--Landing page-->
+    <div class="pt-20 max-w-[1500px] mx-auto">
+        <div class="relative max-w-[1500px]">
+            <h1 class="font-heading tracking-tight text-white text-7xl md:text-9xl font-medium text-center">Bar</h1>
         </div>
-    </header>
-    
-    <section class="mainbanner bg-cover bg-center overflow-hidden -mt-32">
-        <div class="banner grid grid-cols-1 md:grid-cols-2 max-w-[1500px] flex items-center min-h-screen mx-auto py-3 px-4 mt-10">
-            <div class="banner-content text-white mt-32 md:mt-0">
-                <h1 class="text-center md:text-left font-bold mb-5 text-5xl sm:text-6xl md:text-7xl">Helmi <br> Solutions</h1>
-                <p class="text-center md:text-left mb-5 text-3xl">Tarvitseeko yrityksenne nykyaikaisen ja luotettavan kumppanin IT-ratkaisuihin? </p>
-                <div class="text-center md:text-left">
-                    <a href="otayhteytta.html" class="inline-block px-14 py-2.5 bg-[#71C949] hover:bg-[#8AD468] text-black font-semibold rounded-xl text-xl md:mx-auto">Ota yhteyttä</a>
-                </div>
-            </div>
-            <div class="bannerimg items-center justify-center align-center items-center mx-auto p-5 md:pr-0">
-                <img id="gifImage" src="./img/banneri5.png" alt="logogif" class="w-full mx-auto rounded-xl mt-0 md:mt-10">
-            </div>
-        </div>
-    </section>
-    
-    <section class="Palvelut px-4 mb-20">
-        <div class="max-w-[1500px] mt-20 mb-8 mx-auto">
-            <h1 class="text-5xl md:text-6xl text-white">Palvelumme</h1>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 max-w-[1500px] mx-auto">
-            <!-- Box 1 -->
-            <div class="px-4 py-6 flex flex-col sm:flex-row sm:items-center bg-white rounded-xl">
-                <img src="./img/verkkosivut.png" alt="Verkkosivut" class="w-1/3 sm:w-1/5 h-auto mr-2 mb-2 sm:mb-0 rounded-xl">
-                <div>
-                    <h2 class="font-bold text-3xl mb-2">Verkkosivut</h2>
-                    <p class="text-xl">Toteutamme verkkosivustosi räätälöidysti juuri sinun tarpeidesi mukaisesti. Sivustot ovat täysin optimoituja ja niillä on erinomainen hakukoneoptimointi.</p>
-                </div>
-            </div>
-            <!-- Box 2 -->
-            <div class="px-4 py-6 flex flex-col sm:flex-row sm:items-center bg-white rounded-xl">
-                <img src="./img/sovellukset.png" alt="Sovellukset" class="w-1/3 sm:w-1/5 h-auto mr-2 mb-2 sm:mb-0 rounded-xl">
-                <div>
-                    <h2 class="font-bold text-3xl mb-2">Sovellukset</h2>
-                    <p class="text-xl">Toteutamme verkkosivustosi räätälöidysti juuri sinun tarpeidesi mukaisesti. Sivustot ovat täysin optimoituja ja niillä on erinomainen hakukoneoptimointi.</p>
-                </div>
-            </div>
-            <!-- Box 3 -->
-            <div class="px-4 py-6 flex flex-col sm:flex-row sm:items-center bg-white rounded-xl">
-                <img src="./img/konsultointi.png" alt="Konsultointi" class="w-1/3 sm:w-1/5 h-auto mr-2 mb-2 sm:mb-0 rounded-xl">
-                <div>
-                    <h2 class="font-bold text-3xl mb-2">Konsultointi</h2>
-                    <p class="text-xl">Toteutamme verkkosivustosi räätälöidysti juuri sinun tarpeidesi mukaisesti. Sivustot ovat täysin optimoituja ja niillä on erinomainen hakukoneoptimointi.</p>
-                </div>
-            </div>
-            <!-- Box 4 -->
-            <div class="px-4 py-6 flex flex-col sm:flex-row sm:items-center bg-white rounded-xl">
-                <img src="./img/mainokset1.png" alt="Mainokset" class="w-1/3 sm:w-1/5 h-auto mr-2 mb-2 sm:mb-0 rounded-xl">
-                <div>
-                    <h2 class="font-bold text-3xl mb-2">Mainokset</h2>
-                    <p class="text-xl">Toteutamme verkkosivustosi räätälöidysti juuri sinun tarpeidesi mukaisesti. Sivustot ovat täysin optimoituja ja niillä on erinomainen hakukoneoptimointi.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+        <div class="mb-20 max-w-[400px] md:max-w-[800px] mx-auto">
+          <h1 class="font-heading tracking-tight text-white text-7xl md:text-9xl font-medium mb-6 text-end">Tiger</h1>
+          <div class="w-full flex justify-end">
+              <p class="text-xl mb-8 text-white text-end w-[400px]">Bar Tiger on viihtyisä ravintola Kangasniemen keskustassa, joka tarjoaa laadukasta palvelua ja virkistäviä juomia rennossa ilmapiirissä.</p>
+          </div>
+      </div>
+    </div>
+</section>
 
-
-    <section class="Vahvuutemme px-4 mb-20 bg-[#181F42] py-10">
-        <div class="max-w-[1500px] mb-10 mx-auto flex flex-col md:flex-row md:items-center">
-            <div class="mr-5 sm:mr-8 md:mr-4 lg:mr-24">
-                <h1 class="text-white text-5xl md:text-6xl mb-4 md:mb-1.5">Vahvuutemme</h1>
-            </div>
-            <div class="flex items-center">
-                <div class="border-l-2 border-white h-16 mr-4"></div>
-                <p class="text-white text-xl mt-0 max-w-[600px]">Tässä kiteytettynä ovat keskeiset vahvuutemme, jotka muodostavat toimintamme kivijalan ja tarjoavat syitä valita meidät.</p>
-            </div>
+<!--Eka sectio-->
+<section class="max-w-[1300px] mx-auto -mt-20 px-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 rounded-xl overflow-hidden">
+      <div class="relative bg-gradient-to-br from-[#FF7400] to-[#FFC100]">
+        <div class="absolute left-2 top-10 sm:top-5 sm:left-6">
+            <img src="img/tiger4.png" alt="Image" class="w-full">
         </div>
-        <div class="circle-container relative max-h-auto mx-auto">
-            <!-- Central Element -->
-            <div class="center-element text-center">
-                <div class="lg:text-2xl font-bold text-white text-center ml-0 max-w-[150px]">Mitä me tarjoamme</div>
+        <div class="z-10 order-1 md:order-1 flex items-center justify-center text-center rounded-t-xl md:rounded-t-none md:rounded-tl-xl">
+            <div class="m-24 z-10">
+                <h1 class="z-10 text-5xl font-bold mb-3">Varaukset</h1>
+                <h2 class="z-10 text-2xl font-semibold mb-5">Haluatko varata pöydän?</h2>
+                <a href="#Yhteydenotto" class="rounded-full bg-black px-5 py-3 h-14 hover:bg-gray-900 focus:ring-4 focus:ring-gray-200 inline-flex items-center justify-center gap-2 transition duration-200 z-10">
+                    <span class="text-lg font-semibold tracking-tight text-white">Ota yhteyttä</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16" fill="none">
+                        <path d="M14 6.66666H7.33333C4.38781 6.66666 2 9.05447 2 12V13.3333M14 6.66666L10 10.6667M14 6.66666L10 2.66666" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </a>
             </div>
-            <!-- Card 1 -->
-            <div class="card card-1 text-white max-w-[450px] flex-row-reverse mb-4 md:mb-0">
-                <img src="./img/asiantuntemus.png" alt="Image 1" class="border-2 p-3 rounded-full border-[#71C949] mb-2 xl:mb-0">
-                <div class="text-white xl:text-end mr-2">
-                    <h2 class="text-3xl font-bold">Asiantuntemus</h2>
-                    <p class="mt-2 text-xl">Kokeneista asiantuntijoistamme koostuvalla tiimillämme on tietoa ja asiantuntemusta tarjota innovatiivisia ratkaisuja, jotka täyttävät ainutlaatuiset tarpeesi.</p>
-                </div>
-            </div>
-            <!-- Card 2 -->
-            <div class="card card-2 text-white max-w-[450px] flex flex-col lg:flex xl:flex-row-reverse items-end ml-auto xl:ml-0 mb-4 md:mb-0">
-                <img src="./img/teknologiat.png" alt="Image 1" class="border-2 p-3 rounded-full border-[#71C949] mb-2 xl:mb-0">
-                <div class="text-white text-end xl:mr-2">
-                    <h2 class="text-3xl font-bold">Teknologiat</h2>
-                    <p class="mt-2 text-xl">Pysymme ajan tasalla IT-alan uusimmista trendeistä ja teknologioista, jotta voit saada edistyksellisimmät saatavilla olevat ratkaisut.</p>
-                </div>
-            </div>
-            <!-- Card 3 -->
-            <div class="card card-3 text-white max-w-[450px] flex-row mb-4 md:mb-0">
-                <img src="./img/ratkaisut.png" alt="Image 3" class="border-2 p-3 rounded-full border-[#71C949] mb-2 xl:mb-0">
-                <div class="ml-2">
-                    <h2 class="text-3xl font-bold">Ratkaisut</h2>
-                    <p class="mt-2 text-xl">Otamme henkilökohtaisen lähestymistavan jokaiseen projektiin, teemme tiivistä yhteistyötä kanssasi ymmärtääksemme liiketoimintaasi ja luodaksemme toimivia ratkaisuja.</p>
-                </div>
-            </div>
-            <!-- Card 4 -->
-            <div class="card card-4 text-white max-w-[450px] flex flex-col lg:flex xl:flex-row items-end ml-auto xl:ml-0 mb-4 md:mb-0">
-                <img src="./img/tulokset.png" alt="Image 4" class="border-2 p-3 rounded-full border-[#71C949] mb-2 xl:mb-0">
-                <div class="text-white xl:text-start text-end xl:ml-2">
-                    <h2 class="text-3xl font-bold">Tulokset</h2>
-                    <p class="mt-2 text-xl">Menestyksemme puhuu puolestaan - olemme auttaneet erikokoisia ja eri toimialoilla toimivia yrityksiä saavuttamaan tavoitteensa IT-ratkaisujemme avulla.</p>
-                </div>
-            </div>
-            <!-- Card 5 -->
-            <div class="card card-5 text-white max-w-[450px] flex flex-col xl:flex xl:flex-row-reverse items-start mr-auto lg:ml-0 mb-4 md:mb-0">
-                <img src="./img/maanlaheisyys.png" alt="Image 1" class="border-2 p-3 rounded-full border-[#71C949] mb-2 xl:mb-0">
-                <div class="text-white text-start xl:text-end mr-2">
-                    <h2 class="text-3xl font-bold">Maanläheisyys</h2>
-                    <p class="mt-2 text-xl">Meille asiakassuhteet ovat enemmän kuin vain liiketoimintaa – ne ovat kumppanuuksia. Kuuntelemme tarkasti asiakkaidemme tarpeita ja toiveita, jotta voimme tarjota heille yksilöllisiä ja räätälöityjä ratkaisuja.</p>
-                </div>
-            </div>
-            <!-- Card 6 -->
-            <div class="card card-6 text-white max-w-[450px] flex flex-col lg:flex xl:flex-row items-end ml-auto xl:ml-0 mb-4 md:mb-0">
-                <img src="./img/tuki.png" alt="Image 6" class="border-2 p-3 rounded-full border-[#71C949] mb-2 xl:mb-0">
-                <div class="ml-2 text-end xl:text-start xl:ml-2">
-                    <h2 class="text-3xl font-bold">Tuki</h2>
-                    <p class="mt-2 text-xl">Tarjoamme jatkuvaa tukea ja autamme yritystänne menestymään kattavalla asiantuntemuksella ja sitoutumisella.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="Tavoitteemme px-4 my-24 md:my-32">
-        <div class="max-w-[1500px] my-20 flex mx-auto grid grid-cols-1 md:grid-cols-2">
-            <div class="text-white flex flex-col">
-                <hr class="w-[90px] h-px bg-white mb-1">
-                <h1 class="text-5xl mb-8 md:mb-0">Missiomme</h1>
-            </div>
-                <div>
-                    <p class="text-2xl mb-4 text-white mb-6">Haluamme helpottaa yrittäjien arkea madaltamalla kynnystä nykyaikaistaa ja digitalisoida heidän palveluitaan sekä parantaa heidän järjestelmiään. Tarjoamme ratkaisuja, jotka tekevät yrittäjien päivittäisestä työstä sujuvampaa ja tehokkaampaa.</p>
-                    <a href="meista.html" class="px-14 py-2.5 bg-[#71C949] hover:bg-[#8AD468] text-black font-semibold rounded-xl text-xl">Lisää meistä</a>
-                </div>
-            </div>
-        </section>
-
-<!--FOOTER-->
-<footer class="relative bottom-0 bg-[#181F42] pt-8 pb-4 px-4">
-    <div class="container mx-auto text-white">
-        <div class="grid grid-cols-1 lg:grid-cols-2 justify-between">
-            <!-- Logo -->
-            <img src="./img/logo4.png" alt="Logo" class="w-24 h-24">
-            <!-- Uutiskirje -->
-            <div class="flex lg:hidden flex-col mb-8 mt-2">
-                <h3 class="text-white mb-2 text-2xl">Tilaa uutiskirjeemme</h3>
-                <div class="sm:flex">
-                    <input type="email" placeholder="Sähköpostiosoitteesi" class="bg-white text-black pl-3 py-2 rounded-lg mr-2 w-[280px]" required>
-                    <button class="bg-[#71C949] hover:bg-[#8AD468] text-black font-semibold text-center px-12 sm:px-10 py-2 rounded-lg mt-2 sm:mt-0 lg:text-xl">Tilaa</button>
-                </div>
-                
-            </div>
-            <!-- Listat -->
-            <div class="grid gap-y-6 md:gap-y-0 grid-cols-2 sm:grid-cols-3 text-left">
-                <ul class="mr-20 sm:mr-5 lg:mr-20 flex flex-col">
-                    <h2 class="font-semibold text-xl mb-5 text-left">Linkit</h2>
-                    <li class="mb-3"><a href="index.html" class="text-white text-left text-lg hover:text-[#71C949]">Koti</a></li>
-                    <li class="mb-3"><a href="palvelut.html" class="text-white text-left text-lg hover:text-[#71C949]">Palvelut</a></li>
-                    <li class="mb-3"><a href="meista.html" class="text-white text-left text-lg hover:text-[#71C949]">Meistä</a></li>
-                    <li class="mb-3"><a href="otayhteytta.html" class="text-white text-left text-lg hover:text-[#71C949]">Ota yhteyttä</a></li>
-                </ul>
-                <ul class="mr-20 sm:mr-5 lg:mr-20 flex flex-col">
-                    <h2 class="font-semibold text-xl mb-5 text-left">Socials</h2>
-                    <li class="mb-3"><a href="https://www.facebook.com/" class="text-white text-left text-lg hover:text-[#71C949]">Facebook</a></li>
-                    <li class="mb-3"><a href="https://www.instagram.com/" class="text-white text-left text-lg hover:text-[#71C949]">Instagram</a></li>
-                    <li class="mb-3"><a href="https://www.linkedin.com/" class="text-white text-left text-lg hover:text-[#71C949]">LinkedIn</a></li>
-                </ul>
-                <ul class="flex flex-col">
-                    <h2 class="font-semibold text-xl mb-5 text-left">Yhteystiedot</h2>
-                    <li class="mb-3"><a href="mailto:miika@helmisolutions.fi" class="text-white text-left text-lg hover:text-[#71C949]">miika@heso.fi</a></li>
-                    <li class="mb-3"><a href="tel:+358 40 0774008" class="text-white text-left text-lg hover:text-[#71C949]">+358 40 0774008</a></li>
-                </ul>
-            </div>
-        </div>
-        <!-- Uutiskirje -->
-        <div class="hidden lg:flex md:flex-col mb-8 lg:-mt-24 max-w-[410px]">
-            <h3 class="text-white mb-2 text-2xl">Tilaa uutiskirjeemme</h3>
-            <div class="hidden md:flex">
-                <input type="email" placeholder="Sähköpostiosoitteesi" class="bg-white text-black pl-3 py-2 rounded-lg mr-2 w-[280px]" required>
-                <button class="bg-[#71C949] hover:bg-[#8AD468] text-black font-semibold text-center px-10 py-2 rounded-lg xl:text-xl">Tilaa</button>
-            </div>
-        </div>
-        <!-- Copyright teksti -->
-        <div class="flex items-center justify-center text-white text-sm mt-4">
-            <p class="mr-1">Copyright &#169;</p>
-            <span id="get-current-year" class="mr-1">2024</span>
-            <p>Helmi Solutions</p>
         </div>
     </div>
-</footer>
+    
+        <div class="z-10 order-2 md:order-2  md:rounded-t-none md:rounded-r-xl">
+            <img src="img/tigeri.png" alt="" class="w-full h-[390px] object-cover max-h-[390px]">
+        </div>
+
+        <div class="z-10 order-4 md:order-3 md:rounded-b-none md:rounded-l-xl">
+            <img src="img/terassi.png" alt="" class="w-full h-[390px] md:h-[600px] object-cover max-h-[590px]">
+        </div>
+
+        <div class="facebook-container bg-gradient-to-tl from-[#FF7400] to-[#FFC100] z-10 order-3 md:order-4 w-full flex flex-col h-full items-center justify-center rounded-b-none md:rounded-br-xl mx-auto" id="Tapahtumat">
+          <h1 class="z-10 text-5xl font-bold my-12 md:mt-3 md:mb-6 text-center">Tapahtumat</h1>
+              <!-- Facebook Page Plugin -->
+              <div class="fb-page" 
+              data-href="https://www.facebook.com/profile.php?id=100057447918098" 
+              data-tabs="timeline" 
+              data-width="" 
+              data-height="" 
+              data-small-header="false" 
+              data-adapt-container-width="true" 
+              data-hide-cover="false" data-show-facepile="true">
+              <blockquote cite="https://www.facebook.com/profile.php?id=100057447918098" class="fb-xfbml-parse-ignore">
+                <a href="https://www.facebook.com/profile.php?id=100057447918098">Bar Tiger</a>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+          <div id="fb-root"></div>
+          <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v12.0"></script>
+    </section>
+
+<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v10.0"></script>
+<!--Palvelut sectio-->
+<section class="px-4 my-20 bg-[#0E1111] relative overflow-hidden" id="Palvelut">
+  <div class="absolute top-20 right-0 transform translate-x-1/2">
+    <img class="w-2/3" src="img/tiger.png" alt="Top Right Image">
+  </div>
+  <div class="flex flex-col items-center">
+    <i class="fas fa-glass-martini-alt text-white text-4xl mb-3"></i>
+    <div class="rounded-2xl max-w-[1500px] mx-auto">
+      <hr class="border-t-2 border-[#384141] mb-3 w-[310px] sm:w-[450px] md:w-[550px] mx-auto">
+      <h1 class="font-heading tracking-tight text-4xl md:text-5xl font-medium text-white text-center">Palvelut</h1>
+      <hr class="border-t-2 border-[#384141] mt-3 mb-20 w-[310px] sm:w-[450px] md:w-[550px] mx-auto">
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8 max-w-[1500px] mx-auto z-10">
+      <div class="bg-gradient-to-br from-[#FF7400] to-[#FFC100] rounded-xl p-4">
+        <img src="img/karaoke.png" alt="Image 1" class="rounded-t-xl mb-4 w-1/4">
+        <h2 class="text-2xl font-bold mb-2">Karaoke</h2>
+        <p class="text-gray-800">Meiltä löytyy karaokelle omat tilat, jossa viihtyy isompikin seurue.</p>
+      </div>
+      <div class="bg-gradient-to-bl from-[#FF7400] to-[#FFC100] rounded-xl p-4">
+        <img src="img/terrace.png" alt="Image 2" class="rounded-t-xl mb-4 w-1/4">
+        <h2 class="text-2xl font-bold mb-2">Terassi</h2>
+        <p class="text-gray-800">Ison ja viihtyisän terassin rento tunnelma tarjoaa täydelliset puitteet mukavaan illanviettoon.</p>
+      </div>
+      <div class="bg-gradient-to-br from-[#FF7400] to-[#FFC100] rounded-xl p-4">
+        <img src="img/dartboard.png" alt="Image 3" class="rounded-t-xl mb-4 w-1/4">
+        <h2 class="text-2xl font-bold mb-2">Darts</h2>
+        <p class="text-gray-800">Tarjoamme asiakkaidemme käyttöön darts-taulun ja tikat.</p>
+      </div>
+      <div class="bg-gradient-to-bl from-[#FF7400] to-[#FFC100] rounded-xl p-4">
+        <img src="img/tic-tac-toe.png" alt="Image 3" class="rounded-t-xl mb-4 w-1/4">
+        <h2 class="text-2xl font-bold mb-2">Lautapelit</h2>
+        <p class="text-gray-800">Valmistaudu rentoon illanviettoon! Tule viettämään aikaa ystävien seurassa lautapelien äärellä.</p>
+      </div>
+      <div class="bg-gradient-to-tr from-[#FF7400] to-[#FFC100] rounded-xl p-4">
+        <img src="img/snack.png" alt="Image 4" class="rounded-t-xl mb-4 w-1/4">
+        <h2 class="text-2xl font-bold mb-2">Pientä purtavaa</h2>
+        <p class="text-gray-800">Meiltä löytyy lisäksi pientä suolaista purtavaa nälän yllättäessä.</p>
+      </div>
+      <div class="bg-gradient-to-tl from-[#FF7400] to-[#FFC100] rounded-xl p-4">
+        <img src="img/lemon-tea.png" alt="Image 4" class="rounded-t-xl mb-4 w-1/4">
+        <h2 class="text-2xl font-bold mb-2">Drinkit ja juomat</h2>
+        <p class="text-gray-800">Tarjoamme monipuolisen valikoiman erilaisia juomia, sekä alkoholillisia että alkoholittomia vaihtoehtoja, kuten drinkkejä, hanatuotteita ja pullojuomia.</p>
+      </div>
+      <div class="bg-gradient-to-tr from-[#FF7400] to-[#FFC100] rounded-xl p-4">
+        <img src="img/dj.png" alt="Image 4" class="rounded-t-xl mb-4 w-1/4">
+        <h2 class="text-2xl font-bold mb-2">DJ</h2>
+        <p class="text-gray-800">DJ pistää tanssikansan sukat pyörimään jaloissa, aina lauantaisin kello 22:00-04:00</p>
+      </div>
+      <div class="bg-gradient-to-tl from-[#FF7400] to-[#FFC100] rounded-xl p-4">
+        <img src="img/tickets.png" alt="Image 4" class="rounded-t-xl mb-4 w-1/4">
+        <h2 class="text-2xl font-bold mb-2">Sisäänpääsy</h2>
+        <p class="text-gray-800">Arkisin sisäänpääsy on ilmainen, lauantaisin 5€ pääsymaksu.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="bg-white bg-no-repeat bg-center bg-cover bg-fixed overflow-hidden" style="background-image: url('img/karaoke.png');">
+        <div class="py-40 bg-[#355BAD] bg-opacity-20" style="backdrop-filter: blur(1px);">
+          <div class="container px-4 mx-auto">
+            <div class="text-center max-w-3xl mx-auto">
+              <i class="fas fa-clock text-white text-4xl mb-3 mx-auto items-center justify-center"></i>
+              <hr class="border-t-2 border-[#384141] mb-3 w-[310px] sm:w-[450px] md:w-[550px] mx-auto">
+              <h1 class="font-heading tracking-tight text-4xl md:text-5xl font-medium text-white text-center">Aukioloajat</h1>
+              <hr class="border-t-2 border-[#384141] mt-3 mb-20 w-[310px] sm:w-[450px] md:w-[550px] mx-auto">              <div class="flex justify-center space-x-4 text-white text-xl">
+                <p class="">Keskiviikko-Torstai 18:00 - 23:00(02:00)</p>
+                <p class="">Perjantai 18:00 - 02:00</p>
+                <p class="">Lauantai 18:00 - 04:00</p>
+            </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="px-4 md:px-24 py-20 bg-[#FF7400]" id="Meista">
+        <div class="rounded-2xl max-w-[1500px] mx-auto bg-[#0E1111]">
+          <div class="flex flex-wrap">
+            <div class="w-full lg:w-1/3">
+              <img class="w-full h-full rounded-tl-2xl rounded-bl-none lg:rounded-bl-2xl rounded-tr-2xl lg:rounded-tr-none object-cover" src="img/baari.jpg" alt="">
+            </div>
+            <div class="w-full lg:w-2/3">
+              <div class="py-16 px-8 md:px-24">
+                <h1 class="font-heading tracking-tight text-4xl md:text-5xl font-medium mb-28 max-w-xl text-white">Meistä</h1>
+                <p class="text-xl tracking-tight mb-8 max-w-lg text-white">Bar Tiger on viihtyisä baari, joka sijaitsee Kangasniemen sydämmessä tarjoten monipuolisia palveluita. Valikoimastamme löydät maistuvia ja raikkaita juomia, ja rennon tunnelman. Panostamme erinomaiseen asiakaspalveluun, joka saa jokaisen asiakkaan tuntemaan olonsa kotoisaksi. Olitpa sitten kiinnostunut illanvietosta karaokea laulaen, lautapelejä pelaillen tai tanssilattialla pyörähdellen, meiltä löydät kaiken saman katon alta. Tervetuloa nauttimaan ystävien seurasta ja laadukkaasta palvelusta Bar Tigerissä!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+<!--Yhteydenotto-->
+<section class="px-4 md:px-24 py-20 bg-[#0E1111] relative overflow-hidden" id="Yhteydenotto">
+    <div class="mx-auto max-w-[1500px]">
+      <img class="absolute left-50 top-1/2 transform -translate-y-1/2 w-3/4 sm:w-2/4 lg:w-1/4 lg:mt-5" src="img/tiger5.png" alt="">
+      <div class="flex flex-wrap -m-4">
+      <div class="w-full lg:w-1/2 p-4">
+        <div class="flex flex-col justify-between gap-8 h-full">
+          <div class="z-10">
+            <h1 class="font-heading tracking-tight text-white text-5xl md:text-6xl font-medium mb-4">Ota meihin yhteyttä</h1>
+            <p class="tracking-tight text-gray-200 max-w-md">Heräsikö kysymyksiä tai jäikö jokin mietityttämään? Ota yhteyttä niin palaamme asiaasi.</p>
+          </div>
+          <div class="max-w-xl z-10">
+            <div class="flex flex-wrap -m-4">
+              <div class="w-full sm:w-1/2 p-4">
+                <p class="text-white text-opacity-50 text-sm font-medium mb-6">Osoite</p>
+                <ul>
+                  <li class="tracking-tight text-white">Otto Mannisen tie 6</li>
+                  <li class="tracking-tight text-white">51200, Kangasniemi</li>
+                </ul>
+              </div>
+              <div class="w-full sm:w-1/2 p-4">
+                <p class="text-white text-opacity-50 text-sm font-medium mb-6">Soita meille</p>
+                <ul>
+                  <li class="tracking-tight text-white">+358 40 0774008</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-full lg:w-1/2 p-4 z-10">
+        <div class="lg:pt-24">
+          <form action="#">
+            <div class="max-w-2xl">
+              <div class="flex flex-wrap -m-4 mb-3">
+                <div class="w-full sm:w-1/2 p-4 z-10">
+                  <label for="contact2-input1" class="block mb-3 text-sm font-medium tracking-tight text-white">Nimesi</label>
+                  <input type="text" id="contact2-input1" class="w-full px-6 py-4 bg-black text-white rounded-full border border-gray-800 placeholder-gray-500 focus:ring-4 focus:ring-gray-200 outline-none transition duration-200" placeholder="Matti Meikäläinen">
+                </div>
+                <div class="w-full sm:w-1/2 p-4 z-10">
+                  <label for="contact2-input2" class="block mb-3 text-sm font-medium tracking-tight text-white">Sähköpostiosoitteesi</label>
+                  <input type="email" id="contact2-input2" class="w-full px-6 py-4 bg-black text-white rounded-full border border-gray-800 placeholder-gray-500 focus:ring-4 focus:ring-gray-200 outline-none transition duration-200" placeholder="mattimeikäläinen@sähköposti.fi">
+                </div>
+              </div>
+              <label for="contact2-input3" class="block mb-3 text-sm font-medium tracking-tight text-white">Aihe</label>
+              <input type="text" id="contact2-input3" class="w-full px-6 py-4 bg-black text-white rounded-full mb-3 border border-gray-800 placeholder-gray-500 focus:ring-4 focus:ring-gray-200 outline-none transition duration-200" placeholder="Lisää aihe">
+              <label for="contact2-input4" class="block mb-3 text-sm font-medium tracking-tight text-white">Viesti</label>
+              <textarea id="contact2-input4" rows="5" class="w-full px-6 py-4 bg-black text-white rounded-3xl resize-none mb-4 border border-gray-800 placeholder-gray-500 focus:ring-4 focus:ring-gray-200 outline-none transition duration-200" placeholder="Kirjoita viestisi"></textarea>
+              <button type="submit" class="bg-[#FFC100] h-16 rounded-full px-6 py-4 inline-flex items-center justify-center gap-2 hover:bg-gray-100 focus:bg-gray-100 focus:ring-4 focus:ring-gray-200 transition duration-200">
+                <span class="font-bold tracking-tight">Lähetä</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16" fill="none">
+                  <path d="M14 6.66663H7.33333C4.38781 6.66663 2 9.05444 2 12V13.3333M14 6.66663L10 10.6666M14 6.66663L10 2.66663" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+</div>
+</section>
+
+<!--FOOTER-->
+<section class="pt-10 sm:pt-10 pb-5 relative bg-[#FF7400]">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-wrap -m-4">
+        <div class="w-full lg:w-1/2 p-4">
+          <div class="flex items-center flex-wrap gap-2 mb-10">
+            <img class="h-32" src="logot/bar-tiger_logo_1COLOR.png" alt="">
+          </div>
+          <div class="flex flex-wrap justify-between gap-8">
+            <ul class="flex flex-col gap-4">
+              <li class="text-black tracking-tight text-lg font-semibold">+358 40 0774008</li>
+              <li class="text-black tracking-tight text-lg font-semibold">miika.utriainen@gmail.com</li>
+              <li class="text-black tracking-tight max-w-xs text-lg font-semibold">Otto Mannisen tie 6, 51200 Kangasniemi</li>
+            </ul>
+            <ul class="flex flex-col gap-4">
+              <li class="flex items-center">
+                  <i class="fab fa-facebook-square text-lg mr-2"></i>
+                  <a href="https://www.facebook.com/profile.php?id=100057447918098&locale=fi_FI" class="text-black hover:text-gray-800 transition duration-200 tracking-tight text-lg font-semibold">Facebook</a>
+              </li>
+              <li class="flex items-center">
+                  <i class="fab fa-instagram text-lg mr-2"></i>
+                  <a href="https://www.instagram.com/bar_tiger_kangasniemi/" class="text-black hover:text-gray-800 transition duration-200 tracking-tight text-lg font-semibold">Instagram</a>
+              </li>
+          </ul>          
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-center items-center text-black mt-20">
+        <p class="mr-1">Copyright &#169;</p>
+        <span id="get-current-year" class="mr-1">2024</span>
+        <p>Helmi Solutions</p>
+      </div>
+    </div>
+  </section>
+
+<script>
+// Get the mobile menu button element
+const mobileMenuButton = document.querySelector('.navbar-burger');
+
+// Get the mobile menu container element
+const mobileMenuContainer = document.querySelector('.max-w-xs');
+
+// Add event listener to the mobile menu button
+mobileMenuButton.addEventListener('click', function() {
+    // Toggle the 'hidden' class on the mobile menu container
+    mobileMenuContainer.classList.toggle('hidden');
+});
+
+// Add event listener to close the mobile menu when clicking anywhere outside of it
+document.addEventListener('click', function(event) {
+    // Check if the clicked element is not the mobile menu button or the mobile menu container
+    if (!mobileMenuButton.contains(event.target)) {
+        // Close the mobile menu by adding the 'hidden' class to the mobile menu container
+        mobileMenuContainer.classList.add('hidden');
+    }
+});
+
+</script>
 <!--FOOTER END-->
 </body>
 </html>
